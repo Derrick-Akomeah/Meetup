@@ -1,8 +1,20 @@
 import MeetupList from '../components/meetups/MeetupList';
 import { MongoClient } from 'mongodb';
+import Head from 'next/head';
 
 export default function HomePage(props) {
-	return <MeetupList meetups={props.meetups} />;
+	return (
+		<>
+			<Head>
+				<title>React Meetups</title>
+				<meta
+					name="description"
+					content="Browser a huge list of highly active React meetups!"
+				/>
+			</Head>
+			<MeetupList meetups={props.meetups} />
+		</>
+	);
 }
 
 // pre-generates page dynamically on every request instead on re-rendering on interval
