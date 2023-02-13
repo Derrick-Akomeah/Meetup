@@ -25,7 +25,7 @@ export async function getStaticProps() {
 	// Fetch data from an API or database or read data from a file system
 	// After data fetch you need to return an object
 	const client = await MongoClient.connect(
-		'mongodb+srv://Kalacaazy:Bluelock72@cluster0.bpdz4kx.mongodb.net/meetups?retryWrites=true&w=majority'
+		'mongodb+srv://username:password@cluster0.bpdz4kx.mongodb.net/meetups?retryWrites=true&w=majority'
 	);
 	const db = client.db();
 
